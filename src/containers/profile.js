@@ -1,8 +1,8 @@
 import React from 'react';
 import {Header} from '../components'
-import { Profile } from '../components/header/styles/header';
+import {Profiles} from '../components';
 import * as ROUTES from '../constants/routes'
-import logo from '../log.svg'
+import logo from '../logo.svg'
 
 export default function SelectProfileContainer({user, setProfile}) {
     return (
@@ -13,13 +13,13 @@ export default function SelectProfileContainer({user, setProfile}) {
            </Header> 
 
            <Profiles>
-               <Profiles.Title>WHo is wating?</Profiles.Title>
-               <Profile.List>
-                   <Profiles.User src={user.photoURL}>
+              <Profiles.Title>WHo is wating?</Profiles.Title> 
+               <Profiles.List>
+                   <Profiles.Picture src={user.photoURL}/>
                      <Profiles.Name> {user.displayName}</Profiles.Name>
 
-                   </Profiles.User>
-               </Profile.List>
+                   
+               </Profiles.List>
            </Profiles>
            </>
     );
