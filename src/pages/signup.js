@@ -21,7 +21,25 @@ export default function Signup() {
    const handleSignup =(e)=>{
     e.preventDefault()  
     // firebase sign in
-      
+    firebase
+    .auth()
+    .createUserWithEmailAndPassword(emailAddress, password)
+    .then((res)=> 
+           res.user
+            .updateProfile({
+                displayName:firstName,
+                photoURL: Math.floor(Math.random()*5)+1,
+
+            })
+            .then(()=>{
+                history.push(ROUTES.BROWSE);
+            }) 
+    ).catch((error)=>{
+        setFirstName('')
+        setEmailAddress('')
+        setPassword('')
+        setError(error.message)
+    })
    }
 
 

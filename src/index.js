@@ -13,7 +13,6 @@ ReactDOM.render(
   <>
    <FirebaseContext.Provider value={{firebase}}>
     <GlobalStyle/>
-   
       <App />
    </FirebaseContext.Provider>
   </>,
