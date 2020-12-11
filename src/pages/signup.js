@@ -45,6 +45,7 @@ export default function Signup() {
 
     return (
         <>
+       
         <HeaderContainer>
      <Form>
      <Form.Title>Sign Up</Form.Title>

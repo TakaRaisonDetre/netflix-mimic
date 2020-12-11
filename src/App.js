@@ -26,7 +26,7 @@ export default function App() {
       <IsUserRedirect  
       user={user} 
       loggedInPath={ROUTES.BROWSE} 
-      path={ROUTES.SIGN_IN}>
+      path={ROUTES.SIGN_UP}>
         <Signup/>
     </IsUserRedirect>  
     
@@ -41,7 +41,7 @@ export default function App() {
     path={ROUTES.HOME} 
     user={user} 
     loggedInPath={ROUTES.BROWSE} 
-    patth={ROUTES.HOME}>
+    path={ROUTES.HOME}>
         <Home/>
     </IsUserRedirect>
     </Switch>
